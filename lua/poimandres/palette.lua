@@ -21,6 +21,9 @@ local variants = {
     text = '#E4F0FB',
     white = '#FFFFFF',
     none = 'NONE',
+    full_yellow = '#FFD700',
+    full_blue = '#179FFF',
+    full_purple = '#DA70D6'
   },
 }
 

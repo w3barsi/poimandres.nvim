@@ -189,7 +189,7 @@ function M.get(config)
 
     TSVariable = { fg = p.text },
     -- TSAttribute = {},
-    -- TSKeywordReturn = { fg = p.teal2 },
+     TSKeywordReturn = { fg = p.teal2 },
     TSBoolean = { link = 'Boolean' },
     -- TSCharacter = { link = 'Character' },
     TSComment = { link = 'Comment' },
@@ -220,7 +220,7 @@ function M.get(config)
     TSOperator = { link = 'Operator' },
     TSParameter = { fg = p.text },
     -- TSParameterReference = {},
-    TSProperty = { fg = p.text },
+    TSProperty = { fg = p.blue2 },
     TSPunctBracket = { fg = groups.punctuation },
     TSPunctDelimiter = { fg = groups.punctuation },
     TSPunctSpecial = { fg = groups.punctuation },
@@ -231,7 +231,7 @@ function M.get(config)
     -- TSStringRegex = {},
     -- TSStringSpecial = { fg = p.teal1 },
     -- TSSymbol = {},
-    TSTag = { fg = p.text },
+    TSTag = { fg = p.teal1 },
     TSTagDelimiter = { fg = p.text },
     TSTagAttribute = { fg = p.blue2, style = styles.italic },
     TSText = { fg = p.text },
@@ -265,13 +265,13 @@ function M.get(config)
     LspCodeLensSeparator = { fg = p.blueGray3 }, -- separator between two or more code lens
 
     -- nvim-ts-rainbow
-    rainbowcol1 = { fg = p.blue1 },
-    rainbowcol2 = { fg = p.teal1 },
-    rainbowcol3 = { fg = p.yellow },
-    rainbowcol4 = { fg = p.blue2 },
-    rainbowcol5 = { fg = p.teal2 },
-    rainbowcol6 = { fg = p.pink3 },
-    rainbowcol7 = { fg = p.blue3 },
+		rainbowcol1 = { fg = p.full_yellow },
+		rainbowcol2 = { fg = p.full_purple },
+		rainbowcol3 = { fg = p.full_blue },
+		rainbowcol4 = { fg = p.full_yellow },
+		rainbowcol5 = { fg = p.full_purple },
+		rainbowcol6 = { fg = p.full_blue },
+		rainbowcol7 = { fg = p.full_yellow },
 
     -- romgrk/barbar.nvim
     BufferCurrent = { fg = p.text, bg = p.background2 },
