@@ -1,6 +1,8 @@
-<div algin="center"> 
+<div align="center"> 
     Fork of `olivercederborg/poimandres.nvim` to make it look closer to the VSCode Version
 </div>
+
+#####
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/47901349/182481495-06f11e94-8d8a-4580-b869-56b6defae182.png" width="100px">      
