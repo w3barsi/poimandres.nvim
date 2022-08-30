@@ -1,4 +1,4 @@
-local utils = require('poimandres.utils')
+local utils = require('poimandress.utils')
 
 local M = {}
 
@@ -70,9 +70,9 @@ function M.colorscheme()
 	end
 
 	vim.opt.termguicolors = true
-	vim.g.colors_name = 'poimandres'
+	vim.g.colors_name = 'poimandress'
 
-	local theme = require('poimandres.theme').get(config)
+	local theme = require('poimandress.theme').get(config)
 
 	-- Set theme highlights
 	for group, color in pairs(theme) do
