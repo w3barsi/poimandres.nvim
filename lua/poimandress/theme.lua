@@ -16,6 +16,7 @@ function M.get(config)
   styles.nc_background = (config.dim_nc_background and groups.panel) or styles.background
 
   theme = {
+
     ColorColumn = { bg = p.blueGray1 },
     Conceal = { bg = p.none },
     CurSearch = { link = 'IncSearch' },
@@ -36,7 +37,7 @@ function M.get(config)
     Directory = { fg = p.blue3, bg = p.none },
     -- EndOfBuffer = {},
     ErrorMsg = { fg = p.pink3, style = 'bold' },
-    FloatBorder = { fg = groups.border },
+    FloatBorder = { fg = p.full_yellow, bg = p.background1 },
     FloatTitle = { fg = p.blueGray2 },
     FoldColumn = { fg = p.blueGray2 },
     Folded = { fg = p.text, bg = groups.panel },
@@ -47,7 +48,7 @@ function M.get(config)
     MoreMsg = { fg = p.blue3 },
     NonText = { fg = p.blue4 },
     Normal = { fg = p.text, bg = styles.background },
-    NormalFloat = { fg = p.text, bg = styles.float_background },
+    NormalFloat = { fg = p.text, bg = p.background1 },
     NormalNC = { fg = p.text, bg = styles.nc_background },
     NvimInternalError = { fg = '#ffffff', bg = p.pink3 },
     Pmenu = { fg = p.blueGray1, bg = styles.float_background },
@@ -189,7 +190,7 @@ function M.get(config)
 
     TSVariable = { fg = p.text },
     -- TSAttribute = {},
-     TSKeywordReturn = { fg = p.teal2 },
+    TSKeywordReturn = { fg = p.teal2 },
     TSBoolean = { link = 'Boolean' },
     -- TSCharacter = { link = 'Character' },
     TSComment = { link = 'Comment' },
@@ -241,6 +242,7 @@ function M.get(config)
     TSURI = { fg = groups.link },
     -- TSUnderline = {},
 
+
     -- tsx/jsx
     typescriptVariable = { fg = p.blue2 },
     typescriptExport = { fg = p.teal1 },
@@ -255,6 +257,9 @@ function M.get(config)
     typescriptParenExp = { fg = p.blueGray2 },
     typescriptObjectType = { fg = p.blueGray1 },
 
+    -- c/c++
+    cString = { fg = p.text },
+
     -- vim.lsp.buf.document_highlight()
     LspReferenceText = { bg = p.blue2 },
     LspReferenceRead = { bg = p.blue2 },
@@ -265,13 +270,13 @@ function M.get(config)
     LspCodeLensSeparator = { fg = p.blueGray3 }, -- separator between two or more code lens
 
     -- nvim-ts-rainbow
-		rainbowcol1 = { fg = p.full_yellow },
-		rainbowcol2 = { fg = p.full_purple },
-		rainbowcol3 = { fg = p.full_blue },
-		rainbowcol4 = { fg = p.full_yellow },
-		rainbowcol5 = { fg = p.full_purple },
-		rainbowcol6 = { fg = p.full_blue },
-		rainbowcol7 = { fg = p.full_yellow },
+    rainbowcol1 = { fg = p.full_yellow },
+    rainbowcol2 = { fg = p.full_purple },
+    rainbowcol3 = { fg = p.full_blue },
+    rainbowcol4 = { fg = p.full_yellow },
+    rainbowcol5 = { fg = p.full_purple },
+    rainbowcol6 = { fg = p.full_blue },
+    rainbowcol7 = { fg = p.full_yellow },
 
     -- romgrk/barbar.nvim
     BufferCurrent = { fg = p.text, bg = p.background2 },
@@ -292,12 +297,12 @@ function M.get(config)
     BufferVisibleTarget = { fg = p.yellow },
 
     -- lewis6991/gitsigns.nvim
-    GitSignsAdd = { fg = groups.git_add },
-    GitSignsChange = { fg = groups.git_change },
-    GitSignsDelete = { fg = groups.git_delete },
-    SignAdd = { link = 'GitSignsAdd' },
-    SignChange = { link = 'GitSignsChange' },
-    SignDelete = { link = 'GitSignsDelete' },
+    GitSignsAdd = { fg = groups.git_add, bg = groups.background },
+    GitSignsChange = { fg = groups.git_change , bg = groups.background },
+    GitSignsDelete = { fg = groups.git_delete, bg = groups.background  },
+    SignAdd = { link = 'GitSignsAdd' , bg = groups.background },
+    SignChange = { link = 'GitSignsChange' , bg = groups.background },
+    SignDelete = { link = 'GitSignsDelete' , bg = groups.background },
 
     -- mvllow/modes.nvim
     ModesCopy = { bg = p.yellow },
