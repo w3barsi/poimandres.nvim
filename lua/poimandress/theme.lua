@@ -17,7 +17,7 @@ function M.get(config)
 
   theme = {
 
-    ColorColumn = { bg = p.blueGray1 },
+    ColorColumn = { bg = p.background1 },
     Conceal = { bg = p.none },
     CurSearch = { link = 'IncSearch' },
     -- Cursor = {},
@@ -103,7 +103,7 @@ function M.get(config)
     Conditional = { fg = p.blue3 }, --  if, then, else, endif, switch, etc.
     Repeat = { fg = p.blue3 }, --   for, do, while, etc.
     Label = { fg = p.text }, --    case, default, etc.
-    Operator = { fg = p.blue2 }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = p.blue1 }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = p.blue2 }, --  any other keyword
     Exception = { fg = p.blue3 }, --  try, catch, throw
 
@@ -159,14 +159,14 @@ function M.get(config)
 
     debugPC = { bg = p.background1 }, -- used for highlighting the current line in terminal-debug
     debugBreakpoint = { bg = p.background2, fg = p.pink3 }, -- used for breakpoint colors in terminal-debug
-    DiagnosticError = { fg = groups.error },
-    DiagnosticHint = { fg = groups.hint },
-    DiagnosticInfo = { fg = groups.info },
-    DiagnosticWarn = { fg = groups.warn },
-    DiagnosticDefaultError = { fg = groups.error },
-    DiagnosticDefaultHint = { fg = groups.hint },
-    DiagnosticDefaultInfo = { fg = groups.info },
-    DiagnosticDefaultWarn = { fg = groups.warn },
+    DiagnosticError = { fg = groups.error, bg = p.background3 },
+    DiagnosticHint = { fg = groups.hint, p.background3 },
+    DiagnosticInfo = { fg = groups.info, p.background3 },
+    DiagnosticWarn = { fg = groups.warn, p.background3 },
+    DiagnosticDefaultError = { fg = groups.error, p.background3 },
+    DiagnosticDefaultHint = { fg = groups.hint, p.background3 },
+    DiagnosticDefaultInfo = { fg = groups.info, p.background3 },
+    DiagnosticDefaultWarn = { fg = groups.warn, p.background3 },
     DiagnosticFloatingError = { fg = groups.error },
     DiagnosticFloatingHint = { fg = groups.hint },
     DiagnosticFloatingInfo = { fg = groups.info },
@@ -175,10 +175,10 @@ function M.get(config)
     DiagnosticSignHint = { fg = groups.hint },
     DiagnosticSignInfo = { fg = groups.info },
     DiagnosticSignWarn = { fg = groups.warn },
-    DiagnosticStatusLineError = { fg = groups.error, bg = groups.panel },
-    DiagnosticStatusLineHint = { fg = groups.hint, bg = groups.panel },
-    DiagnosticStatusLineInfo = { fg = groups.info, bg = groups.panel },
-    DiagnosticStatusLineWarn = { fg = groups.warn, bg = groups.panel },
+    DiagnosticStatusLineError = { fg = groups.error, bg = p.background3 },
+    DiagnosticStatusLineHint = { fg = groups.hint, bg = p.background3 },
+    DiagnosticStatusLineInfo = { fg = groups.info, bg = p.background3 },
+    DiagnosticStatusLineWarn = { fg = groups.warn, bg = p.background3 },
     DiagnosticUnderlineError = { sp = groups.error, style = 'undercurl' },
     DiagnosticUnderlineHint = { sp = groups.hint, style = 'undercurl' },
     DiagnosticUnderlineInfo = { sp = groups.info, style = 'undercurl' },
@@ -298,11 +298,11 @@ function M.get(config)
 
     -- lewis6991/gitsigns.nvim
     GitSignsAdd = { fg = groups.git_add, bg = groups.background },
-    GitSignsChange = { fg = groups.git_change , bg = groups.background },
-    GitSignsDelete = { fg = groups.git_delete, bg = groups.background  },
-    SignAdd = { link = 'GitSignsAdd' , bg = groups.background },
-    SignChange = { link = 'GitSignsChange' , bg = groups.background },
-    SignDelete = { link = 'GitSignsDelete' , bg = groups.background },
+    GitSignsChange = { fg = groups.git_change, bg = groups.background },
+    GitSignsDelete = { fg = groups.git_delete, bg = groups.background },
+    SignAdd = { link = 'GitSignsAdd', bg = groups.background },
+    SignChange = { link = 'GitSignsChange', bg = groups.background },
+    SignDelete = { link = 'GitSignsDelete', bg = groups.background },
 
     -- mvllow/modes.nvim
     ModesCopy = { bg = p.yellow },
@@ -396,6 +396,11 @@ function M.get(config)
     NotifyERRORBorder = { fg = p.pink3 },
     NotifyERRORTitle = { link = 'NotifyERRORBorder' },
     NotifyERRORIcon = { link = 'NotifyERRORBorder' },
+
+    -- lspsaga
+    LspSagaRenameBorder = { fg = p.full_blue, bg = p.background1 },
+    LspSagaHoverBorder = { fg = p.full_yellow, bg = p.background1 },
+    LspFloatWinNormal = { bg = p.background1 },
   }
 
   vim.g.terminal_color_0 = p.background3 -- black
